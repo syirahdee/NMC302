@@ -1,0 +1,270 @@
+/* ==========================================
+   GLOBAL VIEWPORT SIZING CONFIGURATION
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Smooth gliding jump transitions across anchor sections */
+}
+
+body {
+    background-color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Master full viewport layouts */
+.wiki-container {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; 
+}
+
+.wiki-row {
+    width: 100%;
+    display: block;
+}
+
+.frame-wrapper {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.frame-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover; 
+}
+
+/* ==========================================
+   INTERACTIVE BANNER COMPONENT OVERLAYS (ROW 1)
+   ========================================== */
+.interactive-frame {
+    position: relative;
+}
+
+/* 1. Top Utility Navigation (Stream, TokToq, Store) */
+.top-nav-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 12.2%;
+    z-index: 10;
+}
+
+.nav-item {
+    display: block;
+    height: 60%;
+    margin-left: 3.5%;
+    cursor: pointer;
+    background: transparent;
+}
+
+.item-home    { width: 6%; }
+.item-stream  { width: 8%; }
+.item-toktoq  { width: 8%; }
+.item-store   { width: 7%; }
+
+/* 2. Middle Row Quick Jump Anchors */
+.middle-buttons-overlay {
+    position: absolute;
+    bottom: 23%;
+    left: 0;
+    width: 100%;
+    height: 9%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 8%;
+    z-index: 10;
+}
+
+.mid-btn {
+    display: block;
+    width: 18%;
+    height: 100%;
+    cursor: pointer;
+    border-radius: 25px;
+    background: transparent;
+}
+
+/* 3. Bottom Row Social Links */
+.bottom-socials-overlay {
+    position: absolute;
+    bottom: 2%;
+    right: 1.5%;
+    width: 25%;
+    height: 7%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 10;
+}
+
+.social-btn {
+    display: block;
+    height: 80%;
+    width: 16%;
+    margin-left: 4%;
+    cursor: pointer;
+    background: transparent;
+}
+
+/* ==========================================
+   MEMBER DETAIL VIEWPORTS & ESCAPE CONTROLS
+   ========================================== */
+.member-profiles-group {
+    width: 100%;
+}
+
+.member-frame {
+    position: relative;
+}
+
+/* Transparent structural box mapped to match "BACK TO MEMBER PAGE" text bounds */
+.back-to-top-btn {
+    position: absolute;
+    bottom: 0.5%;
+    right: 2%;
+    width: 18%;
+    height: 2.5%;
+    display: block;
+    cursor: pointer;
+    background: transparent;
+    z-index: 20;
+    /* border: 1px dashed rgba(255,255,255,0.5); */ /* Toggle if checking coordinates */
+}
+
+/* ==========================================
+   GLOBAL LAYOUT ENGINE & ASPECT RATIO LOCK
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #2b2b2b; /* Blends perfectly into dark graphics background panels */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    display: flex;
+    justify-content: center; /* Horizontally centers the layout on ultra-wide monitors */
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* 
+   Locks the canvas area to exactly match your layout composition.
+   Prevents images from losing aspect ratio or sizing characteristics.
+*/
+.wiki-container {
+    width: 100%;
+    max-width: 480px; /* Base structural slice width of the original infographics */
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+}
+
+.wiki-row, 
+.wiki-section-group {
+    width: 100%;
+}
+
+.frame-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Forces native 1:1 image sizing rendering without compression glitches */
+.frame-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ==========================================
+   NAVIGATION COORD OVERLAYS (FRAME 1 MENU)
+   ========================================== */
+.interactive-frame {
+    position: relative;
+}
+
+.top-nav-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 12%;
+    z-index: 10;
+}
+
+.nav-item {
+    display: block;
+    height: 60%;
+    margin-left: 3.5%;
+    background: transparent;
+}
+
+.item-home    { width: 6%; }
+.item-stream  { width: 8%; }
+.item-toktoq  { width: 8%; }
+.item-store   { width: 7%; }
+
+.middle-buttons-overlay {
+    position: absolute;
+    bottom: 23%;
+    left: 0;
+    width: 100%;
+    height: 9%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 8%;
+    z-index: 10;
+}
+
+.mid-btn {
+    display: block;
+    width: 18%;
+    height: 100%;
+    background: transparent;
+    cursor: pointer;
+}
+
+/* ==========================================
+   BACK NAV SHORTCUT HOTZONE
+   ========================================== */
+.back-to-top-btn {
+    position: absolute;
+    bottom: 0.15%;
+    right: 2%;
+    width: 20%;
+    height: 1.2%;
+    display: block;
+    cursor: pointer;
+    background: transparent;
+    z-index: 20;
+}
